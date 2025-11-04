@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+    <div class="user">
+        <img src="images/user.jpeg" alt="" class="user_image">
+
+    </div>
+    <header>
+        <div class="menu_side">
+            <h1>Playlist</h1>
+            <div class="playlist">
+                <h4 class="active"><span></span><i class="fa-solid fa-music"></i>Playlist</h4>
+                <h4 class="active"><i class="fa-solid fa-music"></i>Last Listening</h4>
+                <h4 class="active"><i class="fa-solid fa-music"></i>Recommended</h4>
+
+            </div>
+            <div class="menu_song">
+                <li class="songitem">
+                    <span>1</span>
+                    <img src="images/1.jpeg" alt="">
+                    <h5>Chle ana<br>
+                        
+                    </h5>
+                    <i class="fa-solid fa-play" id="1"></i>
+                </li>
+                <li class="songitem">
+                    <span>2</span>
+                    <img src="images/2.jpeg" alt="">
+                    <h5> all too well <br>
+                       
+                    </h5>
+                    <i class="fa-solid fa-play" id="2"></i>
+                </li>
+                <li class="songitem">
+                    <span>3</span>
+                    <img src="images/3.jpeg" alt="">
+                    <h5>cruel summer<br>
+                        
+                    </h5>
+                    <i class="fa-solid fa-play" id="3"></i>
+                </li>
+                <li class="songitem">
+                    <span>4</span>
+                    <img src="images/4.jpeg" alt="">
+                    <h5>love story<br>
+                        
+                    </h5>
+                    <i class="fa-solid fa-play" id="4"></i>
+                </li>
+                <li class="songitem">
+                    <span>5</span>
+                    <img src="images/5.jpeg" alt="">
+                    <h5>shake it off<br>
+                        
+                    </h5>
+                    <i class="fa-solid fa-play" id="5"></i>
+                </li>
+                <li class="songitem">
+                    <span>6</span>
+                    <img src="images/6.jpeg" alt="">
+                    <h5>blank space<br>
+                    </h5>
+                    <i class="fa-solid fa-play" id="6"></i>
+                </li>
+                <li class="songitem">
+                    <span>7</span>
+                    <img src="images/7.jpeg" alt="">
+                    <h5>Bol do na zra<br>
+
+                    </h5>
+                    <i class="fa-solid fa-play" id="7"></i>
+                </li>
+                <li class="songitem">
+                    <span>8</span>
+                    <img src="images/8.jpeg" alt="">
+                    <h5>Hua hai aaj pheli baar <br>
+                       
+                    </h5>
+                    <i class="fa-solid fa-play" id="8"></i>
+                </li>
+                <li class="songitem">
+                    <span>9</span>
+                    <img src="images/9.jpeg" alt="">
+                    <h5>mai rahoon ya na rahoon<br>
+                       
+                    </h5>
+                    <i class="fa-solid fa-play" id="9"></i>
+                </li>
+                <li class="songitem">
+                    <span>10</span>
+                    <img src="images/10.jpeg" alt="">
+                    <h5>tum kya mile<br>
+            </div>
+        </div>
+        <div class="song_side">
+            <nav>
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Search Music">
+                </div>
+                <ul>
+                    <li>EXPLORE <span></span>
+                    </li>
+                    <li>MY LIBRARY <span></span></li>
+                    <li>RADIO <span></span></li>
+                </ul>
+            </nav>
+            <div class="content">
+                 <h1>Arijit Singh</h1>
+        <img src="images/arjit singh.jpg" alt="">
+        <p>A modern day troubadour whose voice resonates with the heartbeats of millions.</p>
+        <div class="button">
+                    <button>PLAY</button>
+                    <button>FOLLOW</button>
+                </div>
+            </div>
+            <div class="popular_song">
+                <div class="h4">
+                    <h4>Popular Artists</h4>
+                    <div class="btn_s">
+                        <i class="fa-solid fa-arrow-left" id="artistLeft"></i>
+                        <i class="fa-solid fa-arrow-right" id="artistRight"></i>
+                    </div>
+                </div>
+                <ul class="items" id="artistScroll">
+                    <li><img src="images/arjit singh.jpg" height="60"></li>
+                    <li><img src="images/armaan malik.jpg" height="60"></li>
+                    <li><img src="images/lady gaga.jpg" height="60"></li>
+                    <li><img src="images/ed sheran.jpg" height="60"></li>
+                    <li><img src="images/shreya ghoshal.jpg" height="60"></li>  
+                    <li><img src="images/taylor swift.jpg" height="60"></li>
+                    <li><img src="images/bruno mars.jpg" height="60"></li>
+                    <li><img src="images/justin.jpg" height="60"></li>
+                    <li><img src="images/asees.jpeg" height="60"></li>
+                    <li><img src="images/coldplay.jpg" height="60"></li>
+                    <li><img src="images/arf rahmna.jpg" height="60"></li>
+                    <li><img src="images/sunishi.jpg" height="60"></li>
+                    <li><img src="images/diljit.jpg" height="60"></li>
+                    <li><img src="images/dua.jpg" height="60"></li>
+
+                </ul>
+            </div>
+
+            <div class="popular_artist">
+                <div class="h4">
+                    <h4>Popular Songs</h4>
+                    <div class="btn_s">
+                        <i class="fa-solid fa-arrow-left" id="songLeft"></i>
+                        <i class="fa-solid fa-arrow-right" id="songRight"></i>
+                    </div>
+                </div>
+                 <ul class="pop_song" id="songScroll">
+                    <li class="songitem">
+                        <ul class="menu_song">
+    <li class="songitem">
+        <div class="img_play">
+            <img src="images/1.jpeg" alt="">
+            <i class="fa-solid fa-play"></i>
+        </div>
+        <h5>Chle ana<div class="subtitle">Arjit singh</div></h5>
+    </li>
+
+    <li class="songitem">
+        <div class="img_play">
+            <img src="images/2.jpeg" alt="">
+            <i class="fa-solid fa-play"></i>
+        </div>
+        <h5>all too well<div class="subtitle">Taylor Swift</div></h5>
+    </li>
+
+    <li class="songitem">
+        <div class="img_play">
+            <img src="images/3.jpeg" alt="">
+            <i class="fa-solid fa-play"></i>
+        </div>
+        <h5>cruel summer<div class="subtitle">Taylor Swift</div></h5>
+    </li>
+
+    <li class="songitem">
+        <div class="img_play">
+            <img src="images/4.jpeg" alt="">
+            <i class="fa-solid fa-play"></i>
+        </div>
+        <h5>love story<div class="subtitle">Taylor Swift</div></h5>
+    </li>
+
+    <li class="songitem">
+        <div class="img_play">
+            <img src="images/5.jpeg" alt="">
+            <i class="fa-solid fa-play"></i>
+        </div>
+        <h5>shake it off<div class="subtitle">Taylor Swift</div></h5>
+    </li>
+
+    <li class="songitem">
+        <div class="img_play">
+            <img src="images/6.jpeg" alt="">
+            <i class="fa-solid fa-play"></i>
+        </div>
+        <h5>blank space<div class="subtitle">Taylor Swift</div></h5>
+    </li>
+
+    <li class="songitem">
+        <div class="img_play">
+            <img src="images/7.jpeg" alt="">
+            <i class="fa-solid fa-play"></i>
+        </div>
+        <h5>Bol do na zra<div class="subtitle">Arjit singh</div></h5>
+    </li>
+
+    <li class="songitem">
+        <div class="img_play">
+            <img src="images/8.jpeg" alt="">
+            <i class="fa-solid fa-play"></i>
+        </div>
+        <h5>Hua hai aaj pheli baar<div class="subtitle">Armaan Malik</div></h5>
+    </li>
+
+    <li class="songitem">
+        <div class="img_play">
+            <img src="images/9.jpeg" alt="">
+            <i class="fa-solid fa-play"></i>
+        </div>
+        <h5>mai rahoon ya na rahoon<div class="subtitle">Armaan Malik</div></h5>
+    </li>
+
+    <li class="songitem">
+        <div class="img_play">
+            <img src="images/10.jpeg" alt="">
+            <i class="fa-solid fa-play"></i>
+        </div>
+        <h5>tum kya mile<div class="subtitle">Arjit singh</div></h5>
+    </li>
+
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="master_play">
+            <div class="wave">
+                <div class="wave1"></div>
+                <div class="wave1"></div>
+                <div class="wave1"></div>
+            </div>
+            <img src="images/1.jpeg" alt="" id="poster_master_play">
+            <h5 id="title"> chle ana
+                <div class="subtitle">Album - Vande Mataram</div>
+            </h5>
+            <div class="icons">
+                <i class="fa-solid fa-heart"></i>
+
+                <i class="fa-solid fa-backward-step"></i>
+                <i class="fa-solid fa-play"></i>
+                <i class="fa-solid fa-forward-step"></i>
+
+                <span id="current-track">00:00</span>
+                <div class="bar">
+                    <input type="range" id="seek" min="0" max="100" value="0">
+                    <div class="bar2" id="bar2"></div>
+                    <div class="dot"></div>
+                </div>
+                <span id="current-end">4.00</span>
+                <div class="vol">
+                    <i class="fa-solid fa-volume-high"></i>
+                    <div class="vol_range_wrap">
+                        <input type="range" id="vol" min="0" max="100" value="100">
+                        <div class="vol_bar"></div>
+                        <div class="dot" id="vol_dot"></div>
+                    </div>
+                </div>
+
+                <div class="right-controls">
+                    <i class="fa-solid fa-random"></i>
+                    <i class="fa-solid fa-repeat"></i>
+
+                    <div class="more-options-container">
+                        <i class="fa-solid fa-ellipsis" id="more-btn"></i>
+
+                        <div class="popup-menu" id="popup-menu">
+                            <div class="popup-item"><i class="fa-solid fa-share"></i> Share</div>
+                            <div class="popup-item"><i class="fa-solid fa-download"></i> Download</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+    
+
+<script src="script.js"></script>
+
+
+
+    </header>
+  
+
+
+
+</body>
+
+</html>
