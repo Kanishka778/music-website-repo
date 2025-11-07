@@ -171,7 +171,6 @@ header .master_play {
     justify-content: flex-start;
     align-items: center;
     padding: 10px 20px;
-
 }
 
 header .master_play .wave {
@@ -1040,4 +1039,14 @@ header .song_side .popular_artist .pop_song li h5 .subtitle{
 
 .items li, .pop_song li {
     flex: 0 0 auto;
+}
+.master_play {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    background: #111727;
+    border: 3px solid #00e0ff;
+    z-index: 9999;
 }

@@ -17,89 +17,115 @@
     </div>
     <header>
         <div class="menu_side">
-            <h1>Playlist</h1>
-            <div class="playlist">
-                <h4 class="active"><span></span><i class="fa-solid fa-music"></i>Playlist</h4>
-                <h4 class="active"><i class="fa-solid fa-music"></i>Last Listening</h4>
-                <h4 class="active"><i class="fa-solid fa-music"></i>Recommended</h4>
+           <h1>Playlist</h1>
+
+<!-- ✅ Add Song Form -->
+<div id="add-song-section" class="add-song-section">
+  <h3>Add Song</h3>
+  <form id="addSongForm">
+    <input type="text" id="songTitle" placeholder="Enter Song Title" required />
+    <input type="text" id="songPoster" placeholder="Poster Image URL" required />
+    <input type="file" id="songFile" accept="audio/*" required />
+    <button type="submit" class="add-btn">Add</button>
+  </form>
+</div>
+
+<div class="playlist">
+
 
             </div>
             <div class="menu_song">
+              <ul id="playlist"></ul>
                 <li class="songitem">
                     <span>1</span>
                     <img src="images/1.jpeg" alt="">
                     <h5>Chle ana<br>
                         
-                    </h5>
-                    <i class="fa-solid fa-play" id="1"></i>
+                <i class="fa-solid fa-play" id="masterPlay"></i>
+
                 </li>
+              
                 <li class="songitem">
                     <span>2</span>
                     <img src="images/2.jpeg" alt="">
                     <h5> all too well <br>
-                       
-                    </h5>
-                    <i class="fa-solid fa-play" id="2"></i>
+
+                <i class="fa-solid fa-play" id="masterPlay"></i>
+
                 </li>
+                
+                    
+                </li>
+                
                 <li class="songitem">
                     <span>3</span>
                     <img src="images/3.jpeg" alt="">
                     <h5>cruel summer<br>
-                        
+                        <i class="fa-solid fa-play" id="masterPlay"></i>
                     </h5>
-                    <i class="fa-solid fa-play" id="3"></i>
+                    
                 </li>
                 <li class="songitem">
                     <span>4</span>
                     <img src="images/4.jpeg" alt="">
                     <h5>love story<br>
-                        
+                        <i class="fa-solid fa-play" id="masterPlay"></i>
                     </h5>
-                    <i class="fa-solid fa-play" id="4"></i>
+                   
                 </li>
                 <li class="songitem">
                     <span>5</span>
                     <img src="images/5.jpeg" alt="">
+                    
                     <h5>shake it off<br>
-                        
+                        <i class="fa-solid fa-play" id="masterPlay"></i>
                     </h5>
-                    <i class="fa-solid fa-play" id="5"></i>
+                   
                 </li>
                 <li class="songitem">
                     <span>6</span>
                     <img src="images/6.jpeg" alt="">
                     <h5>blank space<br>
+                        <i class="fa-solid fa-play" id="masterPlay"></i>
                     </h5>
-                    <i class="fa-solid fa-play" id="6"></i>
+                    
                 </li>
                 <li class="songitem">
                     <span>7</span>
                     <img src="images/7.jpeg" alt="">
                     <h5>Bol do na zra<br>
-
+                        <i class="fa-solid fa-play" id="masterPlay"></i>
                     </h5>
-                    <i class="fa-solid fa-play" id="7"></i>
                 </li>
                 <li class="songitem">
                     <span>8</span>
                     <img src="images/8.jpeg" alt="">
                     <h5>Hua hai aaj pheli baar <br>
-                       
+                        <i class="fa-solid fa-play" id="masterPlay"></i>
                     </h5>
-                    <i class="fa-solid fa-play" id="8"></i>
+                
+                    
                 </li>
                 <li class="songitem">
                     <span>9</span>
                     <img src="images/9.jpeg" alt="">
-                    <h5>mai rahoon ya na rahoon<br>
+                   <h5>mai rahoon ya na rahoon<br>
+
+                        <i class="fa-solid fa-play" id="masterPlay"></i>
+                        </h5>
+                 
+                </li>
                        
-                    </h5>
-                    <i class="fa-solid fa-play" id="9"></i>
+                   
                 </li>
                 <li class="songitem">
                     <span>10</span>
                     <img src="images/10.jpeg" alt="">
                     <h5>tum kya mile<br>
+                    
+                    <i class="fa-solid fa-play" id="masterPlay"></i>
+                    </h5>
+             
             </div>
         </div>
         <div class="song_side">
@@ -241,20 +267,15 @@
         <h5>tum kya mile<div class="subtitle">Arjit singh</div></h5>
     </li>
 
-                </ul>
-            </div>
-        </div>
-
-
         <div class="master_play">
-            <div class="wave">
+          <div class="wave">
                 <div class="wave1"></div>
                 <div class="wave1"></div>
                 <div class="wave1"></div>
             </div>
             <img src="images/1.jpeg" alt="" id="poster_master_play">
             <h5 id="title"> chle ana
-                <div class="subtitle">Album - Vande Mataram</div>
+                <div class="subtitle">Album - chle ana</div>
             </h5>
             <div class="icons">
                 <i class="fa-solid fa-heart"></i>
@@ -297,9 +318,41 @@
 
 
 
-
         </div>
 
+<script>
+// ✅ Dynamic Add Song Feature
+const addSongForm = document.getElementById("addSongForm");
+const playlist = document.getElementById("playlist");
+
+addSongForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const title = document.getElementById("songTitle").value;
+  const poster = document.getElementById("songPoster").value;
+  const fileInput = document.getElementById("songFile");
+  const file = fileInput.files[0];
+  const url = URL.createObjectURL(file);
+
+  const count = playlist.children.length + 1;
+
+  const li = document.createElement("li");
+  li.classList.add("songitem");
+  li.innerHTML = `
+    <span>${count}</span>
+    <img src="${poster}" alt="${title}">
+    <h5>${title}<br><div class="subtitle">User Upload</div></h5>
+    <i class="fa-solid fa-play" id="${count}"></i>
+  `;
+  playlist.appendChild(li);
+
+  fileInput.value = "";
+  document.getElementById("songTitle").value = "";
+  document.getElementById("songPoster").value = "";
+
+  alert("✅ Song added to playlist!");
+});
+</script>
     
 
 <script src="script.js"></script>
