@@ -742,10 +742,10 @@ header .song_side nav .search::before {
 }
 
 .song_side .content h1 {
-    font-size: 35px;
-    font-weight: bold;
-    padding: 10px;
-    margin-left: 20px;
+    font-size: 20px;
+    font-weight: normal;
+    padding: 0px;
+    margin-left: 10px;
 }
 
 .song_side .content p {
@@ -753,7 +753,7 @@ header .song_side nav .search::before {
     padding: 2px;
     margin: 8px;
     margin-top: -79px;
-    margin-left: 21px;
+    margin-left: 10px;
 }
 
 .song_side .content .button {
@@ -963,14 +963,32 @@ header .song_side .popular_artist .pop_song li .img_play img{
     width: 100%;
     height: 100%;
     border-radius: 10px;
+
     
 
 }
-header .song_side .popular_artist .pop_song li:hover .img_play img{
-    opacity: 0.4;
-    transform: translateY(-5px);
-
+.song_side {
+    overflow-y: auto;      /* allows vertical scrolling */
+     
 }
+
+/* For WebKit browsers (like Chrome/Edge) */
+.song_side::-webkit-scrollbar {
+    width: 6px;
+}
+
+.song_side::-webkit-scrollbar-thumb {
+    background: #00ffff;
+    border-radius: 10px;
+}
+
+.song_side::-webkit-scrollbar-track {
+    background: #111727;
+}
+
+
+
+
 header .song_side .popular_artist .pop_song li .img_play i{
     position: absolute;
     font-size: 22px;

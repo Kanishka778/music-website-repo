@@ -1,7 +1,5 @@
-
- // Default first song
+// Default first song
 let music = new Audio("songs/1.mp3");
-
 
 const songs = [
   { id: 1, title: "Chale Ana", artist: "Arijit Singh", src: "songs/1.mp3", poster: "images/1.jpeg" },
